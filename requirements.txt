@@ -1,0 +1,22 @@
+# requirements.txt — Vision-Based Roof Gantry Crane System
+# Install with: pip install -r requirements.txt
+
+# ── Core computer vision ──────────────────────────────────────────────────────
+opencv-python>=4.8.0
+opencv-contrib-python>=4.8.0   # Required for ArUco (cv2.aruco)
+numpy>=1.24.0
+
+# ── Object detection (YOLO) ───────────────────────────────────────────────────
+ultralytics>=8.0.0              # YOLOv8 (includes torch dependency resolution)
+torch>=2.0.0                    # PyTorch — GPU version: pip install torch --index-url https://download.pytorch.org/whl/cu118
+
+# ── Serial communication ──────────────────────────────────────────────────────
+pyserial>=3.5
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+scipy>=1.10.0                   # Optional: Kalman filter (future)
+matplotlib>=3.7.0               # Optional: offline analysis / plotting
+tqdm>=4.65.0                    # Progress bars during calibration
+
+# ── Dev / testing ─────────────────────────────────────────────────────────────
+pytest>=7.4.0
